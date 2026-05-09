@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="OtakuCity — anime-inspired streetwear and merch. Limited drops. Cult collections. Shipped from Lagos to anywhere otaku exist." />
+<title>OtakuCity · Anime Streetwear & Merch</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&family=Zen+Dots&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="scanlines vignette">
+
+<!-- ===== NAV ===== -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all">
+  <div class="nav-blur border-b border-cyan/20">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="font-tech text-xl text-cyan">Otaku<span class="text-magenta">City</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm uppercase tracking-widest text-white/80 font-medium">
+        <a href="#drops" class="hover:text-cyan transition">Drops</a>
+        <a href="#shop" class="hover:text-cyan transition">Shop</a>
+        <a href="#collections" class="hover:text-cyan transition">Collections</a>
+        <a href="#lookbook" class="hover:text-cyan transition">Lookbook</a>
+        <a href="#crew" class="hover:text-cyan transition">Crew</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="#shop" class="hidden md:inline-flex btn-cyan px-5 py-2 rounded-none font-bold text-sm uppercase tracking-widest">Shop Now</a>
+        <button id="cartBtn" class="relative inline-flex w-10 h-10 items-center justify-center border border-cyan/30 hover:border-cyan transition" aria-label="Cart">
+          <svg class="w-4 h-4 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2l2.4 12.3A2 2 0 0 0 9.4 18h8.5a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+          <span id="cartCount" class="absolute -top-1.5 -right-1.5 hidden bg-magenta text-black text-[10px] font-bold w-4 h-4 items-center justify-center">0</span>
+        </button>
+        <button id="menuBtn" class="md:hidden inline-flex w-10 h-10 items-center justify-center border border-cyan/30" aria-label="Menu">
+          <svg class="w-4 h-4 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-cyan/20 px-5 py-5 flex flex-col gap-4 text-white/85 uppercase tracking-widest text-sm">
+      <a href="#drops">Drops</a>
+      <a href="#shop">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#crew">Crew</a>
+      <a href="#shop" class="btn-cyan inline-flex justify-center px-5 py-3 font-bold">Shop Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="relative pt-16 min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0 grid-bg opacity-50"></div>
+  <!-- ambient blobs -->
+  <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-cyan/20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 -right-32 w-[600px] h-[600px] bg-magenta/20 blur-3xl rounded-full"></div>
+
+  <!-- vertical kanji -->
+  <div class="hidden lg:flex absolute right-8 top-1/2 -translate-y-1/2 flex-col gap-3 font-jp text-7xl text-cyan/15 leading-none select-none">
+    <span>東</span><span>京</span><span>夜</span><span>市</span>
+  </div>
+
+  <!-- side date stamp -->
+  <div class="absolute left-5 md:left-8 bottom-8 md:bottom-12 text-[10px] md:text-xs font-tech tracking-widest text-cyan/60">
+    <p>SYS://OTAKUCITY.LIVE</p>
+    <p class="mt-1">DROP_007 // ONLINE <span class="inline-block w-2 h-2 bg-lime rounded-full pulse-dot align-middle"></span></p>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28 w-full grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <div class="reveal corner relative inline-block px-3 py-1.5 mb-6 text-cyan text-xs font-tech tracking-widest"><span></span>NEW DROP · 24.05.26</div>
+      <h1 class="reveal font-display text-7xl sm:text-8xl md:text-[8rem] leading-[0.85] tracking-tight">
+        <span class="glitch neon-cyan" data-text="LOAD">LOAD</span><br/>
+        <span class="neon-magenta">YOUR</span> <span class="text-white">FATE</span><span class="neon-cyan">.</span>
+      </h1>
+      <p class="reveal mt-6 text-white/65 text-base md:text-lg max-w-md font-jp">
+        オタクシティ — Anime-coded streetwear forged in Lagos. Limited drops. Cult collections. Built for the chosen ones.
+      </p>
+      <div class="reveal mt-9 flex flex-wrap gap-3">
+        <a href="#shop" class="btn-cyan px-7 py-3.5 font-bold uppercase text-sm tracking-widest">Enter The Shop</a>
+        <a href="#drops" class="btn-ghost px-7 py-3.5 font-bold uppercase text-sm tracking-widest">View Drops</a>
+      </div>
+
+      <div class="reveal mt-10 grid grid-cols-3 gap-4 max-w-md">
+        <div class="border-l-2 border-cyan pl-3"><p class="font-tech text-2xl text-cyan">07</p><p class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Drops Live</p></div>
+        <div class="border-l-2 border-magenta pl-3"><p class="font-tech text-2xl text-magenta">144H</p><p class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Until Restock</p></div>
+        <div class="border-l-2 border-lime pl-3"><p class="font-tech text-2xl text-lime">2.4K</p><p class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Crew Size</p></div>
+      </div>
+    </div>
+
+    <div class="reveal relative">
+      <div class="relative">
+        <img src="img/bd854efe-7e37-40bc-8f1e-7b2e3b245b01.jpg" class="w-full max-w-md mx-auto rounded-sm border border-cyan/20" alt="Anime streetwear hero"/>
+        <!-- floating badge -->
+        <div class="absolute -top-4 -left-4 spin-slow w-28 h-28 hidden md:flex">
+          <svg viewBox="0 0 200 200" class="w-full h-full">
+            <defs><path id="circ" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"/></defs>
+            <text font-family="Bebas Neue" font-size="22" fill="#00f0ff">
+              <textPath href="#circ">★ LIMITED · BAKEMONO COLLECTION · DROP 007 ★ </textPath>
+            </text>
+          </svg>
+        </div>
+        <!-- price tag -->
+        <div class="absolute -bottom-5 -right-5 md:-right-10 bg-magenta text-black px-5 py-3 font-tech transform rotate-3 text-sm">
+          <p class="text-[10px] uppercase tracking-widest">From</p>
+          <p class="text-2xl">₦18,500</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom cue -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-cyan/60 text-xs font-tech tracking-widest">↓ SCROLL ↓</div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="border-y border-cyan/20 bg-black/40 overflow-hidden py-4">
+  <div class="marquee flex gap-12 whitespace-nowrap font-tech text-2xl md:text-3xl">
+    <span class="text-cyan">★ DROP 007 LIVE ★</span>
+    <span class="text-white/40">FREE SHIPPING ABOVE ₦60K</span>
+    <span class="text-magenta">★ BAKEMONO COLLECTION ★</span>
+    <span class="text-white/40">WORLDWIDE FROM LAGOS</span>
+    <span class="text-lime">★ NEW: SENPAI CO ★</span>
+    <span class="text-white/40">WHATSAPP CHECKOUT</span>
+    <span class="text-cyan">★ DROP 007 LIVE ★</span>
+    <span class="text-white/40">FREE SHIPPING ABOVE ₦60K</span>
+    <span class="text-magenta">★ BAKEMONO COLLECTION ★</span>
+    <span class="text-white/40">WORLDWIDE FROM LAGOS</span>
+    <span class="text-lime">★ NEW: SENPAI CO ★</span>
+    <span class="text-white/40">WHATSAPP CHECKOUT</span>
+  </div>
+</div>
+
+<!-- ===== FEATURED DROPS ===== -->
+<section id="drops" class="py-20 md:py-28 px-5 md:px-8 relative">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal flex items-end justify-between mb-10">
+      <div>
+        <p class="text-cyan text-xs font-tech tracking-widest mb-3">// COLLECTIONS</p>
+        <h2 class="font-display text-5xl md:text-7xl leading-none">FEATURED <span class="neon-magenta">DROPS</span></h2>
+      </div>
+      <a href="#shop" class="hidden md:inline-flex font-tech text-cyan text-xs uppercase tracking-widest hover:text-white">All Drops →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <a href="#shop" class="reveal drop relative aspect-[4/5] overflow-hidden group">
+        <img src="img/c5118f35-2984-4359-b586-e4a36ba196ec.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Bakemono Collection"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute top-4 left-4 px-2.5 py-1 bg-cyan text-black text-[10px] font-tech tracking-widest">★ LIVE</div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <p class="font-tech text-xs text-cyan tracking-widest mb-2">DROP 007 · BAKEMONO</p>
+          <h3 class="font-display text-3xl md:text-4xl leading-tight">Monsters Don't Sleep.</h3>
+          <p class="text-white/65 text-sm mt-2">Oversized tees, hoodies, accessories. 14 pieces.</p>
+          <span class="inline-flex items-center gap-2 mt-4 text-cyan text-sm font-tech tracking-widest">EXPLORE → </span>
+        </div>
+      </a>
+
+      <a href="#shop" class="reveal drop relative aspect-[4/5] overflow-hidden group">
+        <img src="img/c6c5a110-313b-4bb6-b1b9-b25fa7d71bc2.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Senpai Co"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute top-4 left-4 px-2.5 py-1 bg-magenta text-black text-[10px] font-tech tracking-widest">NEW</div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <p class="font-tech text-xs text-magenta tracking-widest mb-2">DROP 006 · SENPAI CO</p>
+          <h3 class="font-display text-3xl md:text-4xl leading-tight">Notice Me.</h3>
+          <p class="text-white/65 text-sm mt-2">Varsity jackets, varsity attitudes. 9 pieces.</p>
+          <span class="inline-flex items-center gap-2 mt-4 text-magenta text-sm font-tech tracking-widest">EXPLORE → </span>
+        </div>
+      </a>
+
+      <a href="#shop" class="reveal drop relative aspect-[4/5] overflow-hidden group">
+        <img src="img/c88def82-4141-46c2-8f05-58039358b97d.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Yandere Lab"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+        <div class="absolute top-4 left-4 px-2.5 py-1 bg-lime text-black text-[10px] font-tech tracking-widest">RESTOCK</div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <p class="font-tech text-xs text-lime tracking-widest mb-2">DROP 005 · YANDERE LAB</p>
+          <h3 class="font-display text-3xl md:text-4xl leading-tight">Pink Means Danger.</h3>
+          <p class="text-white/65 text-sm mt-2">Cropped tees, baggy denim, knit sets. 12 pieces.</p>
+          <span class="inline-flex items-center gap-2 mt-4 text-lime text-sm font-tech tracking-widest">EXPLORE → </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COUNTDOWN BANNER ===== -->
+<section class="py-12 px-5 md:px-8 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-magenta/30 via-cyan/20 to-magenta/30 -z-10"></div>
+  <div class="max-w-7xl mx-auto text-center reveal">
+    <p class="font-tech text-xs tracking-widest text-cyan mb-2">// SYSTEM ALERT</p>
+    <h3 class="font-display text-3xl md:text-5xl">NEXT DROP UNLOCKS IN</h3>
+    <div id="countdown" class="mt-5 flex justify-center gap-3 md:gap-6 font-tech">
+      <div class="text-center"><p class="text-4xl md:text-6xl text-cyan" id="cd-d">00</p><p class="text-[10px] tracking-widest text-white/50">DAYS</p></div>
+      <p class="text-4xl md:text-6xl text-white/30">:</p>
+      <div class="text-center"><p class="text-4xl md:text-6xl text-cyan" id="cd-h">00</p><p class="text-[10px] tracking-widest text-white/50">HRS</p></div>
+      <p class="text-4xl md:text-6xl text-white/30">:</p>
+      <div class="text-center"><p class="text-4xl md:text-6xl text-cyan" id="cd-m">00</p><p class="text-[10px] tracking-widest text-white/50">MIN</p></div>
+      <p class="text-4xl md:text-6xl text-white/30">:</p>
+      <div class="text-center"><p class="text-4xl md:text-6xl text-magenta" id="cd-s">00</p><p class="text-[10px] tracking-widest text-white/50">SEC</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHOP ===== -->
+<section id="shop" class="py-20 md:py-28 px-5 md:px-8 relative">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      <div>
+        <p class="text-cyan text-xs font-tech tracking-widest mb-3">// SHOP</p>
+        <h2 class="font-display text-5xl md:text-7xl leading-none">THE <span class="neon-cyan">VAULT</span></h2>
+        <p class="text-white/55 mt-3 max-w-md font-jp">商品 — handpicked. Limited stock. Once it's gone, it's gone.</p>
+      </div>
+      <div class="inline-flex bg-panel border border-cyan/20 p-1 self-start md:self-end overflow-x-auto no-scrollbar">
+        <button data-cat="all" class="cat-btn size-active px-4 md:px-5 py-2 text-xs uppercase tracking-widest font-tech">All</button>
+        <button data-cat="tees" class="cat-btn px-4 md:px-5 py-2 text-xs uppercase tracking-widest font-tech text-white/60">Tees</button>
+        <button data-cat="hoodies" class="cat-btn px-4 md:px-5 py-2 text-xs uppercase tracking-widest font-tech text-white/60">Hoodies</button>
+        <button data-cat="accessories" class="cat-btn px-4 md:px-5 py-2 text-xs uppercase tracking-widest font-tech text-white/60">Accessories</button>
+        <button data-cat="figures" class="cat-btn px-4 md:px-5 py-2 text-xs uppercase tracking-widest font-tech text-white/60">Figures</button>
+      </div>
+    </div>
+
+    <div id="merchGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+  </div>
+</section>
+
+<!-- ===== COLLECTIONS HERO ===== -->
+<section id="collections" class="py-20 md:py-28 px-5 md:px-8 relative overflow-hidden border-y border-cyan/20">
+  <div class="absolute inset-0 grid-bg opacity-30"></div>
+  <div class="max-w-7xl mx-auto relative">
+    <div class="reveal text-center mb-14">
+      <p class="text-cyan text-xs font-tech tracking-widest mb-3">// LORE</p>
+      <h2 class="font-display text-5xl md:text-7xl">THE <span class="neon-magenta">COLLECTIONS</span></h2>
+      <p class="text-white/55 mt-3 max-w-xl mx-auto">Each drop is a story. Each piece is a chapter. Read them in order, or out — the ending changes you either way.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="reveal neon-border rounded-sm overflow-hidden p-8 md:p-10">
+        <p class="font-tech text-xs tracking-widest text-cyan mb-4">// COLLECTION 01</p>
+        <h3 class="font-display text-4xl md:text-5xl mb-3">BAKEMONO</h3>
+        <p class="font-jp text-magenta text-lg mb-4">化け物 · "the monster"</p>
+        <p class="text-white/65 leading-relaxed mb-6">Built for the ones who never fit in. Oversized silhouettes, bone-white prints, blood-red embroidery. Bakemono is the hero we became after no one came to save us.</p>
+        <ul class="space-y-2 text-sm text-white/60">
+          <li>· 14 pieces</li>
+          <li>· Heavyweight 320 GSM cotton</li>
+          <li>· Lagos-printed, hand-finished</li>
+        </ul>
+      </div>
+
+      <div class="reveal neon-border rounded-sm overflow-hidden p-8 md:p-10">
+        <p class="font-tech text-xs tracking-widest text-magenta mb-4">// COLLECTION 02</p>
+        <h3 class="font-display text-4xl md:text-5xl mb-3">SENPAI CO</h3>
+        <p class="font-jp text-cyan text-lg mb-4">先輩 · "the one ahead"</p>
+        <p class="text-white/65 leading-relaxed mb-6">Varsity codes, twisted. For everyone who chased someone who didn't see them. Wool-blend letterman jackets, raglan tees, knit caps. Cope, in style.</p>
+        <ul class="space-y-2 text-sm text-white/60">
+          <li>· 9 pieces</li>
+          <li>· Wool-poly varsity blend</li>
+          <li>· Embroidered chenille patches</li>
+        </ul>
+      </div>
+
+      <div class="reveal neon-border rounded-sm overflow-hidden p-8 md:p-10">
+        <p class="font-tech text-xs tracking-widest text-lime mb-4">// COLLECTION 03</p>
+        <h3 class="font-display text-4xl md:text-5xl mb-3">YANDERE LAB</h3>
+        <p class="font-jp text-magenta text-lg mb-4">ヤンデレ · "love poisoned"</p>
+        <p class="text-white/65 leading-relaxed mb-6">Pink means danger. Pastel goth meets tactical streetwear. Cropped tees, cargo skirts, knit sets. Pretty things, sharper than they look.</p>
+        <ul class="space-y-2 text-sm text-white/60">
+          <li>· 12 pieces</li>
+          <li>· Bio-washed cotton, ribbed knits</li>
+          <li>· Detachable hardware accents</li>
+        </ul>
+      </div>
+
+      <div class="reveal neon-border rounded-sm overflow-hidden p-8 md:p-10">
+        <p class="font-tech text-xs tracking-widest text-yellow mb-4">// COLLECTION 04</p>
+        <h3 class="font-display text-4xl md:text-5xl mb-3">ISEKAI INC</h3>
+        <p class="font-jp text-cyan text-lg mb-4">異世界 · "another world"</p>
+        <p class="text-white/65 leading-relaxed mb-6">Reborn in another world wearing pieces that didn't exist there. Tech-fabric joggers, panelled overshirts, utility vests. Dress like the protagonist.</p>
+        <ul class="space-y-2 text-sm text-white/60">
+          <li>· 10 pieces</li>
+          <li>· Ripstop and twill blends</li>
+          <li>· Modular pocket systems</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOOKBOOK ===== -->
+<section id="lookbook" class="py-20 md:py-28 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal mb-10">
+      <p class="text-cyan text-xs font-tech tracking-widest mb-3">// LOOKBOOK</p>
+      <h2 class="font-display text-5xl md:text-7xl">SHOT IN <span class="neon-cyan">LAGOS</span> AT 2AM</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      <div class="reveal aspect-[3/4] overflow-hidden md:row-span-2 group relative">
+        <img src="https://images.unsplash.com/photo-1611042553365-9b101441c135?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute bottom-3 left-3 px-2 py-1 bg-cyan text-black text-[10px] font-tech tracking-widest">LOOK_01</div>
+      </div>
+      <div class="reveal aspect-square overflow-hidden group relative">
+        <img src="https://images.unsplash.com/photo-1542295669297-4d352b042bca?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute bottom-3 left-3 px-2 py-1 bg-magenta text-black text-[10px] font-tech tracking-widest">LOOK_02</div>
+      </div>
+      <div class="reveal aspect-square overflow-hidden group relative">
+        <img src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute bottom-3 left-3 px-2 py-1 bg-lime text-black text-[10px] font-tech tracking-widest">LOOK_03</div>
+      </div>
+      <div class="reveal aspect-square overflow-hidden group relative">
+        <img src="https://images.unsplash.com/photo-1521577352947-9bb58764b69a?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute bottom-3 left-3 px-2 py-1 bg-yellow text-black text-[10px] font-tech tracking-widest">LOOK_04</div>
+      </div>
+      <div class="reveal aspect-[3/4] overflow-hidden md:row-span-2 group relative">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute bottom-3 left-3 px-2 py-1 bg-cyan text-black text-[10px] font-tech tracking-widest">LOOK_05</div>
+      </div>
+      <div class="reveal aspect-square overflow-hidden group relative">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute bottom-3 left-3 px-2 py-1 bg-magenta text-black text-[10px] font-tech tracking-widest">LOOK_06</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CREW / TESTIMONIALS ===== -->
+<section id="crew" class="py-20 md:py-28 px-5 md:px-8 bg-panel border-y border-cyan/20">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal text-center mb-12">
+      <p class="text-cyan text-xs font-tech tracking-widest mb-3">// THE CREW</p>
+      <h2 class="font-display text-5xl md:text-7xl">2,400 <span class="neon-magenta">CHOSEN</span> ONES</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <figure class="reveal merch p-6 rounded-sm">
+        <div class="flex gap-0.5 text-cyan mb-3 text-sm">★★★★★</div>
+        <p class="text-white/85 leading-relaxed">"The Bakemono hoodie is HEAVY. Quality is unreal. Got compliments everywhere I went, even at the airport."</p>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-cyan to-magenta rounded-full"></div>
+          <div>
+            <p class="text-sm font-semibold">@kaito_lagos</p>
+            <p class="text-xs text-white/45">Verified buyer · Drop 007</p>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="reveal merch p-6 rounded-sm">
+        <div class="flex gap-0.5 text-cyan mb-3 text-sm">★★★★★</div>
+        <p class="text-white/85 leading-relaxed">"Senpai Co varsity is the only piece in my closet that gets me stopped on the street. Worth every kobo."</p>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-magenta to-lime rounded-full"></div>
+          <div>
+            <p class="text-sm font-semibold">@yumiko.os</p>
+            <p class="text-xs text-white/45">Verified buyer · Drop 006</p>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="reveal merch p-6 rounded-sm">
+        <div class="flex gap-0.5 text-cyan mb-3 text-sm">★★★★★</div>
+        <p class="text-white/85 leading-relaxed">"I've waited 3 drops to cop a Yandere set. Worth the patience. Stitching is perfect, fit is exactly as shown."</p>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-lime to-cyan rounded-full"></div>
+          <div>
+            <p class="text-sm font-semibold">@dani.exe</p>
+            <p class="text-xs text-white/45">Verified buyer · Drop 005</p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOIN CTA ===== -->
+<section class="py-20 md:py-28 px-5 md:px-8 relative overflow-hidden">
+  <div class="absolute inset-0 grid-bg opacity-40"></div>
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-magenta/15 blur-3xl rounded-full"></div>
+  <div class="max-w-3xl mx-auto text-center reveal relative">
+    <p class="text-cyan text-xs font-tech tracking-widest mb-4">// JOIN_THE_CREW</p>
+    <h2 class="font-display text-5xl md:text-7xl leading-none">EARLY ACCESS. <br/><span class="neon-cyan">FIRST</span> DIBS.</h2>
+    <p class="mt-5 text-white/65 max-w-md mx-auto">Join the OtakuCity crew list. Get drop notifications 24h early plus secret restocks.</p>
+
+    <form id="joinForm" class="mt-9 flex flex-col sm:flex-row gap-3 justify-center max-w-lg mx-auto">
+      <input type="email" placeholder="your@email.com" required class="flex-1 bg-black/40 border border-cyan/30 px-5 py-3.5 focus:outline-none focus:border-cyan font-tech text-sm tracking-widest"/>
+      <button type="submit" class="btn-magenta px-7 py-3.5 font-bold uppercase text-sm tracking-widest">Join Crew</button>
+    </form>
+    <p id="joinOk" class="hidden mt-4 text-cyan text-sm font-tech tracking-widest">→ ENROLLED. WELCOME, CHOSEN ONE.</p>
+
+    <div class="mt-10 flex justify-center gap-4">
+      <a href="#" class="w-11 h-11 inline-flex items-center justify-center border border-cyan/30 hover:border-cyan hover:text-cyan transition text-xs font-tech">IG</a>
+      <a href="#" class="w-11 h-11 inline-flex items-center justify-center border border-cyan/30 hover:border-cyan hover:text-cyan transition text-xs font-tech">TT</a>
+      <a href="#" class="w-11 h-11 inline-flex items-center justify-center border border-cyan/30 hover:border-cyan hover:text-cyan transition text-xs font-tech">TW</a>
+      <a href="#" class="w-11 h-11 inline-flex items-center justify-center border border-cyan/30 hover:border-cyan hover:text-cyan transition text-xs font-tech">DC</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="border-t border-cyan/20 px-5 md:px-8 py-14 bg-panel">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-sm">
+    <div>
+      <p class="font-tech text-xl text-cyan">Otaku<span class="text-magenta">City</span></p>
+      <p class="text-white/45 mt-3 max-w-xs">Anime-coded streetwear forged in Lagos. For the chosen ones.</p>
+      <p class="font-jp text-white/30 mt-3 text-xs">© オタクシティ 2026</p>
+    </div>
+    <div>
+      <p class="text-cyan font-tech text-xs tracking-widest mb-4">SHOP</p>
+      <ul class="space-y-2 text-white/70">
+        <li><a href="#drops" class="hover:text-cyan">Drops</a></li>
+        <li><a href="#shop" class="hover:text-cyan">All Merch</a></li>
+        <li><a href="#collections" class="hover:text-cyan">Collections</a></li>
+        <li><a href="#lookbook" class="hover:text-cyan">Lookbook</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-cyan font-tech text-xs tracking-widest mb-4">SUPPORT</p>
+      <ul class="space-y-2 text-white/70">
+        <li><a href="#" class="hover:text-cyan">Sizing</a></li>
+        <li><a href="#" class="hover:text-cyan">Shipping</a></li>
+        <li><a href="#" class="hover:text-cyan">Returns</a></li>
+        <li><a href="#" class="hover:text-cyan">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-cyan font-tech text-xs tracking-widest mb-4">CONTACT</p>
+      <ul class="space-y-2 text-white/70">
+        <li>+234 802 410 0099</li>
+        <li>hello@otakucity.ng</li>
+        <li>WhatsApp Checkout · 24/7</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-cyan/10 text-xs text-white/40 font-tech tracking-widest flex flex-col md:flex-row justify-between gap-2">
+    <p>OTAKUCITY.NG · ALL RIGHTS RESERVED</p>
+    <p>// SYSTEM v2.6 · LAGOS, NIGERIA</p>
+  </div>
+</footer>
+
+<!-- floating WhatsApp -->
+<a href="https://wa.me/2348024100099?text=Yo%20OtakuCity%2C%20I%20want%20to%20cop%20a%20piece" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-lime hover:bg-cyan rounded-none flex items-center justify-center shadow-2xl shadow-lime/40 transition" aria-label="WhatsApp">
+  <svg class="w-7 h-7 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.9-.4-1.7-.9-2.4-1.6-.6-.6-1.1-1.3-1.5-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+</body>
+</html>
