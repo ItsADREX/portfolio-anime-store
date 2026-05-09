@@ -1,27 +1,4 @@
-tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
-          display: ['"Bebas Neue"', 'sans-serif'],
-          tech: ['"Zen Dots"', 'sans-serif'],
-          jp: ['"Noto Sans JP"', 'sans-serif']
-        },
-        colors: {
-          ink: '#06020d',
-          panel: '#0c0820',
-          line: '#1a1432',
-          cyan: '#00f0ff',
-          magenta: '#ff00cc',
-          lime: '#caff00',
-          yellow: '#fff200'
-        }
-      }
-    }
-  };
-
-/* ---- next block ---- */
-
+document.addEventListener('DOMContentLoaded', () => {
 // mobile menu
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -133,3 +110,4 @@ tailwind.config = {
     e.target.querySelector('button').disabled = true;
     document.getElementById('joinOk').classList.remove('hidden');
   });
+});
