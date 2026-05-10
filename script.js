@@ -11,18 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== PRODUCTS =====
   const merch = [
-    { name: 'Bakemono Oversized Tee', cat: 'tees', tag: 'Drop 007 · BAKEMONO', price: 18500, img: 'img/015f6224-7a73-4df0-bc43-392d7dcb644b.jpg', accent: 'cyan' },
-    { name: 'Senpai Co Varsity Jacket', cat: 'hoodies', tag: 'Drop 006 · SENPAI CO', price: 64000, img: 'img/18d4949c-52b5-4eba-b19d-7b34b8ecfc8d.jpg', accent: 'magenta' },
-    { name: 'Yandere Cropped Knit', cat: 'tees', tag: 'Drop 005 · YANDERE LAB', price: 22000, img: 'img/2abc2cb9-54dd-46e5-b0d3-519e78c4580d.jpg', accent: 'lime' },
-    { name: 'Isekai Tech Joggers', cat: 'hoodies', tag: 'Drop 004 · ISEKAI INC', price: 38000, img: 'img/3afa8f00-37f4-4048-b9af-3178cdeff607.jpg', accent: 'yellow' },
-    { name: 'Bakemono Heavy Hoodie', cat: 'hoodies', tag: 'Drop 007 · BAKEMONO', price: 42500, img: 'img/3c30b17d-52e2-4afa-b040-7b5db31d471c.jpg', accent: 'cyan' },
-    { name: 'Otaku Tote Bag', cat: 'accessories', tag: 'Essentials', price: 9500, img: 'img/3d33dcfd-d856-49cc-b858-6d8e60828bfe.jpg', accent: 'magenta' },
-    { name: 'Sound Wave Beanie', cat: 'accessories', tag: 'Essentials', price: 12000, img: 'img/3f789983-77e4-4bcf-91c5-432839834704.jpg', accent: 'lime' },
-    { name: 'Anime Vinyl Figure · Vol.1', cat: 'figures', tag: 'Collectible', price: 28000, img: 'img/3fce257a-e76e-4640-998c-2a1c86dca4b5.jpg', accent: 'magenta' },
-    { name: 'Senpai Co Raglan Tee', cat: 'tees', tag: 'Drop 006 · SENPAI CO', price: 19500, img: 'img/42f710cd-5674-4ae3-9f07-138810390835.jpg', accent: 'magenta' },
-    { name: 'Glitch Print Tee', cat: 'tees', tag: 'Limited', price: 17000, img: 'img/48492f82-cfd6-4591-b392-9545d0881c97.jpg', accent: 'cyan' },
-    { name: 'OtakuCity Cap', cat: 'accessories', tag: 'Essentials', price: 11500, img: 'img/4d2936ac-4465-45a5-b589-d9ac4c9d600a.jpg', accent: 'lime' },
-    { name: 'Mecha Premium Figure', cat: 'figures', tag: 'Collectible · Limited', price: 45000, img: 'img/5f7d0c17-5c1a-4f4c-b58c-ccf29063b0e9.jpg', accent: 'cyan' },
+    { name: 'Bakemono Oversized Tee',     cat: 'tees',        tag: 'Drop 007 · BAKEMONO',      price: 18500, img: 'img/tshirt1.jpg',   accent: 'cyan' },
+    { name: 'Yandere Lab Cropped Tee',    cat: 'tees',        tag: 'Drop 005 · YANDERE LAB',   price: 22000, img: 'img/tshirt2.jpg',   accent: 'magenta' },
+    { name: 'Glitch Print Tee',           cat: 'tees',        tag: 'Limited',                  price: 17000, img: 'img/tshirt3.jpg',   accent: 'lime' },
+    { name: 'Bakemono Heavy Hoodie',      cat: 'hoodies',     tag: 'Drop 007 · BAKEMONO',      price: 42500, img: 'img/hood1.jpg',     accent: 'cyan' },
+    { name: 'Tactical Streetwear Shorts', cat: 'hoodies',     tag: 'Drop 004 · ISEKAI INC',    price: 21000, img: 'img/shorts.jpg',    accent: 'yellow' },
+    { name: 'Senpai Co Sneakers',         cat: 'hoodies',     tag: 'Drop 006 · SENPAI CO',     price: 38000, img: 'img/shoes.jpg',     accent: 'magenta' },
+    { name: 'OtakuCity Cap',              cat: 'accessories', tag: 'Essentials',               price: 11500, img: 'img/cap1.jpg',      accent: 'lime' },
+    { name: 'Cyber Ronin Mask',           cat: 'accessories', tag: 'Limited',                  price: 14500, img: 'img/mask1.jpg',     accent: 'cyan' },
+    { name: 'Senpai Chain Necklace',      cat: 'accessories', tag: 'Drop 006 · SENPAI CO',     price: 16000, img: 'img/neckless1.jpg', accent: 'magenta' },
+    { name: 'Yandere Pendant',            cat: 'accessories', tag: 'Essentials',               price: 9500,  img: 'img/neckless2.jpg', accent: 'magenta' },
+    { name: 'Vinyl Sigil Ring',           cat: 'accessories', tag: 'Essentials',               price: 7500,  img: 'img/ring1.jpg',     accent: 'cyan' },
+    { name: 'Bakemono Wallet',            cat: 'accessories', tag: 'Essentials',               price: 12500, img: 'img/wallet1.jpg',   accent: 'lime' },
+    { name: 'Stacked Bracelet',           cat: 'accessories', tag: 'Essentials',               price: 6500,  img: 'img/bresslet1.jpg', accent: 'yellow' },
+    { name: 'Crystal Sigil Ring',         cat: 'accessories', tag: 'Limited',                  price: 8500,  img: 'img/ring2.jpg',     accent: 'magenta' },
+    { name: 'Mecha Katana Replica',       cat: 'figures',     tag: 'Collectible · Limited',    price: 45000, img: 'img/sword1.jpg',    accent: 'cyan' },
+    { name: 'Anime Vinyl Poster · Vol.1', cat: 'figures',     tag: 'Collectible',              price: 12000, img: 'img/poster1.jpg',   accent: 'magenta' },
   ];
 
   const fmt = n => '₦' + n.toLocaleString('en-NG');
